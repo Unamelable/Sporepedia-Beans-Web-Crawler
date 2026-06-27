@@ -1,0 +1,60 @@
+Old raster UI elements will look horrible on today's screens, so i guess it would be better to write actual UI elements, and format them to look nice later.
+There some fundamental icons that can be used in UI elements. It is advisable to keep original size of small icons (i.e 32x32 and such, if icon size is smaller than others, just resize it to match bigger icon).
+
+Path to gui pictures: C:\Projects\SPORE_WebCrawler\ui_png_elements\GUI_Selected AND site_badges
+Path to sounds: C:\Projects\SPORE_WebCrawler\ui_sounds
+VITAL TO READ! Not all UI icons/sounds should be applied, this is just selection of possible elements that can be used in the project!
+
+bean.png: big picture of creation, can be placed on about section.
+success.png: Large checked symbol signalizing success.
+sporepedia.png: Icon for showing sporepedia, can be used as toggle icon between sporepedia/sporecast section.
+galaxy.png: Icon what can be used as "home" button, or different general/special functionality (sticky radial menu button?).
+settings.png: Icon for settings (config in our case).
+info2,shield,star,error,question.png: probably will fit internal logger window.
+mad,angry,neutral,happy1,happy2.png: Rate ranking.
+delete,delete-hover,delete-pressed,delete-inavailable.png: Icons for remove/delete function if needed.
+folder site_badges: badges that shown on user profiles, and creations with attribute "created with".
+sporecasticon.png: icon for sporecast folder.
+adventure.png: icon for adventures.
+info,info_hover,info_pressed.png: info icon.
+navigate-next,navigate-next-hover,navigate-next-pressed.png: Can be mirrored and used for navigation.
+download,download-hover,download-pressed.png: Icons for publish/download function.
+randomize,randomize_pressed.png: Randomize cube.
+other.png: icon if some sort sections has no thematic icon.
+creature.png: icon for creatures.
+tribal.png: tribal icon (can be used for civilization outfit too).
+civilization.png: icon for civilization (can be used for civilization outfit too).
+vehicle.png: vehicle icon.
+sail.png: icon for sea vehicles.
+airplane.png: icon for airplane.
+military.png: icon for military vehicles.
+religious.png: icon for religious vehicles.
+economic.png: icon for economic vehicles.
+building.png: building icon.
+hall.png: icon for hall building.
+entertainment.png: icon for entertainment building.
+factory.png: icon for factory building.
+house.png: icon for house building.
+ufo.png: icon for space vehicle.
+captain.png: icon for captain.
+
+GUI PART 2
+>> Explaining how sporepedia looks at site and game.
+
+Card format is: Rectangular, vertical, rounded corner card, with themed outline, a large, solid-color header with white text centered inside it, followed by a less vividly colored sub-header with the player's name centered inside it (a less pronounced suitable color for the text frame). The creation category is visible in the left corner. The open card has a different interface, but I hope this will be enough for imagination.
+
+On site, we have 5 columns and 4 rows. In this space, we have "cards" that display those very PNG images along with the corresponding name of the work, the author, and its type (creature,building,vehicle,etc). Since this is an old website from 2008, we don't have generative scrolling; we have to navigate through the pages manually. This is a major drawback. And accordingly, we can change the filter settings at the top.
+
+Ingame, since the creations should already be installed (or will be installed after going online). We have a cool animated menu that loads and unloads "cards" as we scroll down. But then again, we have a very limited web browser that loads even fewer cards (one page at a time). So this browser option definitely doesn't work for us.
+
+>> Explaining how sporecasts looks at site and game.
+
+On site, we have "open folders" arranged in 3 columns and 4 rows, also with page-by-page navigation. Inside the open folders, we see eight creations arranged in two rows creations each, and we can view all the content by opening one of the folders-"if there are a lot of creations, we have to scroll through them page by page as well".
+
+Ingame, we can view our subscriptions to sporecasts through tabs, Essentially, it's the same as Sporepedia, but divided into user-curated sections that are grouped together within Sporepedia. The browser is just powerless, displaying only three thumbnails per page without the ability to view all the content.
+
+>> What we can improve? Inside second part of GUI (Gallery)?
+
+Since we’re essentially downloading content, we have an external in-game browser where we can easily drag and drop our creations into the windowed game, or subscribe to sporecasts via the website or the game’s built-in browser. (If we are able to log in to the program, it can access the downloaded content directly, and queue download after game start). Since this is a standalone Windows application, we can dynamically expand the window by adding as many cards as the monitor can accommodate. The same applies to “open” Sporecast folders. We can zoom-in card that appears when the cursor hovers over the card, displaying all of its possible parameters and stats (You can use two tags at once if the category is two-tiered. For example: "Civ" would have the tags 'creature' and 'civilization'. Another example: Water vehicles in the "economic" ideology will have corresponding "sail+economic" icons in the corner). Cards may also have weak suits in certain categories if we look at "all categories". With possible ignore (ignore database?), and download icon inside card. With sporecasts, the situation is even better, since we can increase the number of columns from 4 and rows from 2 when not hovered, to 5 columns and 3 rows when hovered. Since we've already downloaded the sporecast, we can view all of its contents by opening an enlarged child window with real-time loading/unloading. Add program exclusive favorite tab tag (link essentially), where user can drop favorite sporecasts and sporepedia creations.
+
+Maybe GUI parts should be separated as centered colored tabs on the top (GUI PART 1 "Crawler Mode", GUI PART 2 "Local Gallery", GUI PART 3 "Web Browse")

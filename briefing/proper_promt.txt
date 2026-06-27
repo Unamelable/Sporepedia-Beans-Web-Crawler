@@ -1,0 +1,60 @@
+Read codebase at: C:\Projects\SPORE_WebCrawler\spore_crawler
+Read architecture map at: C:\Projects\SPORE_WebCrawler\briefing\research\CODE_ARCHITECTURE.md
+Read relevant research at: C:\Projects\SPORE_WebCrawler\briefing\research
+Read relevant code changes at: C:\Projects\SPORE_WebCrawler\briefing\code_updates\".md"
+
+=== TASK ===
+Fix the following issues:
+1. [Describe issue]
+
+=== RULES ===
+1. Before editing any file, read its dependency header (the docstring at the top)
+   to know what it depends on and what depends on it.
+2. Every file in spore_crawler/ has a header like:
+   """
+   <module>.py - <purpose>
+   Depends on: <internal imports>
+   Used by: <consumers>
+   Side effects: <what this file mutates/creates/closes>
+   """
+   Use this to avoid breaking callers.
+3. Before editing a command file, read its "Side effects" section to know what
+   resources it opens (Database, HotkeyController, SporeAuth) and what cleanup
+   is required.
+4. Critical cleanup obligations — these MUST be done on every code path:
+   - Database.close() — or use `with Database(...) as db:`
+   - HotkeyController.stop() — or use try/finally
+   - SporeAuth.close() — or use try/finally
+5. After fixing, verify with:
+   - python -m py_compile <changed_file>
+   - python -c "from spore_crawler.cli.commands import cmd_<name>"
+6. Add comments only when explaining non-obvious decisions, constraints, or side effects.
+   Do not add comments that restate the code.
+7. Create new files only when the task requires it. Prefer extending existing files.
+8. Read files in code_updates/ folder to understand recent changes. Changelogs are
+   split by area: api.md, commands.md, crawlers.md, storage.md, ui.md, core.md, (and maybe more).
+   If a fix loop fails, check the changelog for the area you're editing — the
+   breaking change is likely there.
+9. Remember that you can stuck at guessing loop, try to not overthink.
+
+=== CODEBASE CONVENTIONS ===
+- Async commands: all cmd_* functions are async, run via asyncio.run()
+- Config: loaded from config.yaml, accessed as config['section']['key']
+- Logging: log = logging.getLogger(__name__), file-only (no console)
+- Colors: from spore_crawler.cli_ui import set_colors, FG_GREEN, FG_RED, etc.
+- Progress: from spore_crawler.ui.progress import ProgressDisplay, scroll_print
+- Paths: from spore_crawler.cli.utilities import get_app_dir, get_resource_dir
+- Database: from spore_crawler.storage.database import Database
+- Shared state: from spore_crawler.cli.commands._common import state
+
+=== AFTER EACH SESSION ===
+Update code_updates/<area>.md with:
+- File changed
+- Reason for change
+- What specifically changed (2-3 lines max)
+Newest entries at the top. Keep it compact — this is a running diff, not documentation.
+Area files: api.md, commands.md, crawlers.md, storage.md, ui.md, core.md,  (and maybe more).
+
+=== CHANGE IF ABSOLUTELY NECCESSRY ===
+- If "proper_promt.txt" does not reflect the current program project, update the CODEBASE CONVENTIONS to reflect the current state of the code. Remember that this first promt will be entered for future clean sessions with MiMo LLM. Keep it clean as possible.
+- If "CODE_ARCHITECTURE.md" does not reflect the current program project, edit it with minimal changes (to not butcher the entire architecture). If there are fundamental changes, double-check the code. Then go ahead and change the code architecture.

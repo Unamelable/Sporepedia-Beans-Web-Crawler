@@ -1,0 +1,39 @@
+(if we already in program, maybe arguments with double dash or any dash is redundant, test if we can execute commands as example: crawl size 1)
+(don't replace commands and arguments names, they are addition to existing ones!)
+
+stats = server, check
+crawl = download, dw, sporepedia (sporepedia is first command for hint)
+sporecast = cast, sc
+search = find, lookup, look, analyze
+list = ls, lst
+login = auth, signin
+convert-sql = convert, sql, cv
+config = cfg, setup
+
+crawl
+max-pages = mp, p
+amount = a, files
+size = s, mb
+forcestop = fs, f
+
+search
+all = a
+max = m
+
+login
+save = s
+
+convert-sql
+crawler = sp, sc, sporepedia
+sporecast = cast, sc
+search = s, se, src
+all = a, global
+
+config
+show = s
+validate = v, check, chk
+presets = pre, sets, 
+apply = ap, confirm
+reset = rs, r
+set = se
+get = g

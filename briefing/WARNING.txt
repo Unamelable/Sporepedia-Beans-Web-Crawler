@@ -1,0 +1,7 @@
+>>> I do not recommend downloading the entire server, as the total size of all theoretical creations amounts to 5.4+- terabytes of data. <<<
+
+Total Size = 191,000,000 * (average of) 28 KB = 5,348,000,000 KB approximate of 5.35 TB (or 5,348 GB)
+
+If you need to download creations for your own catalog, i recommend using the "Most Popular", "Most Popular New", "Newest" and "Featured" filters. And keep the folder containing the downloaded archive within reasonable limits (a couple of dozen gigabytes; if you don't mind using up space, a couple of hundred is fine too).
+
+If you really need to moderate the database, you can use the "ignore" feature to prevent creation IDs (or sporecasts) from being downloaded.

@@ -1,0 +1,9 @@
+Sporepedia Bean's Web Crawler
+
+WARNING: Currently we are in CLI side right now, because we need to focus on functionality first, and then implement proper user-friendly interface.
+
+Description: Advanced GUI webcrawler with config what allows player to download all sorted creations from sporepedia and sporecasts in the corresponding folder names created by the players (Separately). With database which checks existing creations what allows database to be constantly updated.
+
+Use case: Game allows direct sync from the downloaded PNG's through magic of embedded XML's, so instead of using front end, what is completely outdated from 2008; it’s easier to simply download all player resources and then download them locally via drag-and-drop. If a player wants to download another player’s Sporecast, they can find it manually in their browser and download it from there.
+
+A possible idea at the end: Perhaps we could add a login feature where players could directly browse the catalog through a more user-friendly local interface and subscribe to other players’ creations and sporecasts? If we adopt this approach, we may need to compress the PNG images into a separate format for the GUI program so that the PNG images alone don't take up too much space; this will become clear once the program is in a working version. That doesn't matter right now.

@@ -1,0 +1,22 @@
+This text file is user ideas, don't change anything in it!
+
+>> PART 1
+
+>> RESEARCH
+
+>> GUI
+- Create plan for GUI Part 1 (since cli script is huge, we need to know if all UI elements added). Don't forget to implement config variable that allows user to enable program back at cli mode (opens CMD and prevent it from closing (our continue/exit loop), if command/argument written wrong just returns back to state when program was launched).
+
+- GUI PART 1: Main function window after all CLI functions implemented successfully. (GUI_window_formatting_guessings.txt). Use PySide 6 for GUI, it should be on dark mode initially.
+- GUI PART 2: Gallery mode, shows creations with metadata, and spore exported GUI elements. (and possible direct download/subscription).
+- GUI PART 3: Web only mode? If we can access PNG images directly, why not to load them directly to the application when requested? (Scrolling down = Trigger download cards with metainfo from website, when done - clear cache "data stays on the open application", to prevent RAM overload, clear shown creations, and start downloading new "configurable, default 200 (megabytes)"). This mode will reopen Spore API connection with user agent at the end "Web Browse Mode". If player wants to save cache, config file should have entry "save_web_cache". It should be saved in the folder web_cache.
+
+>> FINAL
+- Change version from 0.6.0 to 1.0.0 when everything is done (user-agent)
+- Package with PyInstaller when all user changes considered done
+
+>> CHECK
+Look at overall code, so you could implement checking for the next:
+1. Check/Update help section for each command if they are not reflecting what they executing (command <arguments>)
+2. Check/Update logging system to reflect current code features.
+3. Check/Update bean_test (testing suite) to reflect currently implemented features (remember that this command should execute each command with different arguments so it actually executes all features). 
